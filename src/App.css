@@ -1,38 +1,61 @@
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url('/public/images/background.png'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.info-box, .scoreboard-box {
+  background-color: #ffffff;
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px;
+  margin: 10px;
+  width: 45%; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+/* Assuming styles are in App.css, or adapt this to Scoreboard.css */
+
+.scoreboard-box table {
+  width: 100%; /* Full width of its container */
+  border-collapse: separate; /* Ensures spacing between columns */
+  border-spacing: 0 1em; /* Adjust the spacing as desired */
+  background-color: #fff; /* Default background for all rows */
+}
+
+
+/* To add more space between columns, you can target the th or td elements */
+.scoreboard-box th, .scoreboard-box td {
+  padding-right: 2em; /* Adjust as needed */
+}
+
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .info-box, .scoreboard-box {
+    width: 90%; /* Take up more width on smaller screens */
   }
 }

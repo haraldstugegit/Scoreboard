@@ -1,0 +1,46 @@
+/* Scoreboard.css */
+.scoreboard-container {
+  max-width: 100%;
+}
+
+.scoreboard {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5em; /* This adds space between the rows */
+}
+
+/* Add specific styles for the table header */
+.scoreboard thead tr {
+  background-color: #e8e8e8; /* A distinct color for the header row */
+}
+
+/* Styles for the header cells */
+.scoreboard th {
+  padding: 0.75em; /* Adjust padding to enlarge cells */
+  text-align: left;
+  background-color: #e8e8e8; /* Ensure the header background color fills the cell */
+}
+
+/* Adjustments for body cells */
+.scoreboard tbody td {
+  padding: 0.75em; /* Consistent padding with the header cells */
+  text-align: left;
+  background-color: #ffffff; /* Default background color for all body rows */
+}
+
+/* Alternate row color for even rows */
+.scoreboard tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Ensure the odd rows don't get enlarged unintentionally */
+/* If they're still enlarged, you might need to check for other CSS affecting these elements */
+.scoreboard tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* or any other color you wish to use */
+}
+
+/* Styles for the country flags */
+.country-flag {
+  width: 32px;
+  height: 20px;
+}

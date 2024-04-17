@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Scoreboard from './Scoreboard';
 
 function App() {
+  const competitionName = "The Autonomous Ship Challenge";
+  const competitionDescription = "A competition where innovative minds control ships through treacherous waters, all autonomously.";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="content">
+        <div className="info-box">
+          <h1>Today's Competition:</h1>
+          <h2>{competitionName}</h2>
+          <p>{competitionDescription}</p>
+          <img href="/images/segl_svart.png"/>
+        </div>
+        <div className="scoreboard-box">
+          <Scoreboard />
+        </div>
+      </div>
     </div>
   );
 }
